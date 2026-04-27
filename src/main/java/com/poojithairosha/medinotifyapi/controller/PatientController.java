@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.poojithairosha.medinotifyapi.controller.ApiUrls.PatientsUrls.PATIENTS;
+import static com.poojithairosha.medinotifyapi.controller.ApiUrls.PatientsUrls.PATIENTS_BY_ID;
+
 @RestController
-@RequestMapping("/api/patients")
+@RequestMapping(PATIENTS)
 @RequiredArgsConstructor
 public class PatientController {
 
@@ -31,7 +34,7 @@ public class PatientController {
         return ResponseEntity.status(HttpStatus.CREATED).body(patientService.createPatient(request));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(PATIENTS_BY_ID)
     public ResponseEntity<PatientResponse> getPatientById(@PathVariable String id) {
         return ResponseEntity.ok(patientService.getPatientById(id));
     }

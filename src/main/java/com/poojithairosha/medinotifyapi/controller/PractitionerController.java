@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.poojithairosha.medinotifyapi.controller.ApiUrls.PractitionersUrls.PRACTITIONERS;
+import static com.poojithairosha.medinotifyapi.controller.ApiUrls.PractitionersUrls.PRACTITIONERS_BY_ID;
+
 @RestController
-@RequestMapping("/api/practitioners")
+@RequestMapping(PRACTITIONERS)
 @RequiredArgsConstructor
 public class PractitionerController {
 
@@ -31,7 +34,7 @@ public class PractitionerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(practitionerService.createPractitioner(request));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(PRACTITIONERS_BY_ID)
     public ResponseEntity<PractitionerResponse> getPractitionerById(@PathVariable String id) {
         return ResponseEntity.ok(practitionerService.getPractitionerById(id));
     }
