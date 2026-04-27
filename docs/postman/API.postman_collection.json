@@ -1,0 +1,1005 @@
+{
+  "info": {
+    "_postman_id": "74fbcb93-65cf-4b1b-8a91-e07a4515930b",
+    "name": "MediNotifyAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22071623"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "practitioners",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "get Practitioner By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/practitioners/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "practitioners",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "69efd3dda03c82bcc4dab8dc"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/practitioners/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "practitioners",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"string\",\n  \"personDetails\": {\n    \"fullName\": \"string\",\n    \"contact\": {\n      \"email\": \"string\",\n      \"phone\": \"string\"\n    }\n  },\n  \"registrationNo\": \"string\",\n  \"specialty\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "list Practitioners",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/practitioners?page=0&size=10&sort=id,asc",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "practitioners"
+                  ],
+                  "query": [
+                    {
+                      "key": "registrationNo",
+                      "value": "",
+                      "disabled": true
+                    },
+                    {
+                      "key": "name",
+                      "value": "",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "id,asc"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/practitioners?registrationNo=string&name=string&page=2667&size=5895&sort=string,string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "practitioners"
+                      ],
+                      "query": [
+                        {
+                          "key": "registrationNo",
+                          "value": "string"
+                        },
+                        {
+                          "key": "name",
+                          "value": "string"
+                        },
+                        {
+                          "key": "page",
+                          "value": "2667"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5895"
+                        },
+                        {
+                          "key": "sort",
+                          "value": "string,string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalElements\": 3820,\n  \"totalPages\": 4295,\n  \"first\": true,\n  \"last\": true,\n  \"size\": 1129,\n  \"content\": [\n    {\n      \"id\": \"string\",\n      \"personDetails\": {\n        \"fullName\": \"string\",\n        \"contact\": {\n          \"email\": \"string\",\n          \"phone\": \"string\"\n        }\n      },\n      \"registrationNo\": \"string\",\n      \"specialty\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"personDetails\": {\n        \"fullName\": \"string\",\n        \"contact\": {\n          \"email\": \"string\",\n          \"phone\": \"string\"\n        }\n      },\n      \"registrationNo\": \"string\",\n      \"specialty\": \"string\"\n    }\n  ],\n  \"number\": 6350,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"pageable\": {\n    \"offset\": 8861,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": true\n    },\n    \"pageNumber\": 2180,\n    \"pageSize\": 7146,\n    \"paged\": true,\n    \"unpaged\": false\n  },\n  \"numberOfElements\": 5112,\n  \"empty\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "create Practitioner",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fullName\": \"Dr. Kasun Silva\",\n  \"registrationNo\": \"SLMC-1001\",\n  \"specialty\": \"Cardiology\",\n  \"contact\": {\n    \"email\": \"kasun.silva@example.com\",\n    \"phone\": \"+94771234568\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/practitioners",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "practitioners"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"fullName\": \"string\",\n  \"registrationNo\": \"string\",\n  \"specialty\": \"string\",\n  \"contact\": {\n    \"email\": \"string\",\n    \"phone\": \"string\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/practitioners",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "practitioners"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"string\",\n  \"personDetails\": {\n    \"fullName\": \"string\",\n    \"contact\": {\n      \"email\": \"string\",\n      \"phone\": \"string\"\n    }\n  },\n  \"registrationNo\": \"string\",\n  \"specialty\": \"string\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "patients",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "get Patient By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "69efd12837fd9cca2de39769"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/patients/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "patients",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"string\",\n  \"personDetails\": {\n    \"fullName\": \"string\",\n    \"contact\": {\n      \"email\": \"string\",\n      \"phone\": \"string\"\n    }\n  },\n  \"nationalId\": \"string\",\n  \"dateOfBirth\": \"2025-10-31\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "search Patients",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/patients?page=0&size=10&sort=id,asc",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "patients"
+                  ],
+                  "query": [
+                    {
+                      "key": "nationalId",
+                      "value": "",
+                      "disabled": true
+                    },
+                    {
+                      "key": "name",
+                      "value": "",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "id,asc"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients?nationalId=string&name=string&page=2667&size=5895&sort=string,string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients"
+                      ],
+                      "query": [
+                        {
+                          "key": "nationalId",
+                          "value": "string"
+                        },
+                        {
+                          "key": "name",
+                          "value": "string"
+                        },
+                        {
+                          "key": "page",
+                          "value": "2667"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5895"
+                        },
+                        {
+                          "key": "sort",
+                          "value": "string,string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalElements\": 6755,\n  \"totalPages\": 9987,\n  \"first\": false,\n  \"last\": false,\n  \"size\": 8059,\n  \"content\": [\n    {\n      \"id\": \"string\",\n      \"personDetails\": {\n        \"fullName\": \"string\",\n        \"contact\": {\n          \"email\": \"string\",\n          \"phone\": \"string\"\n        }\n      },\n      \"nationalId\": \"string\",\n      \"dateOfBirth\": \"1965-12-06\"\n    },\n    {\n      \"id\": \"string\",\n      \"personDetails\": {\n        \"fullName\": \"string\",\n        \"contact\": {\n          \"email\": \"string\",\n          \"phone\": \"string\"\n        }\n      },\n      \"nationalId\": \"string\",\n      \"dateOfBirth\": \"2014-04-03\"\n    }\n  ],\n  \"number\": 9077,\n  \"sort\": {\n    \"empty\": true,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"pageable\": {\n    \"offset\": 7492,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": false,\n      \"unsorted\": true\n    },\n    \"pageNumber\": 910,\n    \"pageSize\": 5732,\n    \"paged\": false,\n    \"unpaged\": true\n  },\n  \"numberOfElements\": 2522,\n  \"empty\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "create Patient",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fullName\": \"Poojitha Irosha\",\n  \"nationalId\": \"200012345627\",\n  \"dateOfBirth\": \"2000-04-13\",\n  \"contact\": {\n    \"email\": \"nimal@example.com\",\n    \"phone\": \"+94771234567\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/patients",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "patients"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"dateOfBirth\": \"1973-10-18\",\n  \"fullName\": \"string\",\n  \"nationalId\": \"string\",\n  \"contact\": {\n    \"email\": \"string\",\n    \"phone\": \"string\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/patients",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "patients"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"string\",\n  \"personDetails\": {\n    \"fullName\": \"string\",\n    \"contact\": {\n      \"email\": \"string\",\n      \"phone\": \"string\"\n    }\n  },\n  \"nationalId\": \"string\",\n  \"dateOfBirth\": \"2025-10-31\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "appointments",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "cancel",
+                  "item": [
+                    {
+                      "name": "cancel Appointment",
+                      "request": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/appointments/:id/cancel",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "appointments",
+                            ":id",
+                            "cancel"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": ""
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "PATCH",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/appointments/:id/cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "appointments",
+                                ":id",
+                                "cancel"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": \"string\",\n  \"patientId\": \"string\",\n  \"practitionerId\": \"string\",\n  \"startTime\": \"2002-03-02T00:59:13.171Z\",\n  \"endTime\": \"2002-08-08T13:13:31.640Z\",\n  \"status\": \"COMPLETED\",\n  \"notes\": \"string\",\n  \"createdAt\": \"1962-01-01T11:36:40.576Z\",\n  \"updatedAt\": \"1981-08-12T03:34:47.121Z\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "get Appointment By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/appointments/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "appointments",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": ""
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/appointments/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "appointments",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"string\",\n  \"patientId\": \"string\",\n  \"practitionerId\": \"string\",\n  \"startTime\": \"2002-03-02T00:59:13.171Z\",\n  \"endTime\": \"2002-08-08T13:13:31.640Z\",\n  \"status\": \"COMPLETED\",\n  \"notes\": \"string\",\n  \"createdAt\": \"1962-01-01T11:36:40.576Z\",\n  \"updatedAt\": \"1981-08-12T03:34:47.121Z\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "update Appointment Notes",
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"notes\": \"\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/appointments/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "appointments",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": ""
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"notes\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/appointments/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "appointments",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": \"string\",\n  \"patientId\": \"string\",\n  \"practitionerId\": \"string\",\n  \"startTime\": \"2002-03-02T00:59:13.171Z\",\n  \"endTime\": \"2002-08-08T13:13:31.640Z\",\n  \"status\": \"COMPLETED\",\n  \"notes\": \"string\",\n  \"createdAt\": \"1962-01-01T11:36:40.576Z\",\n  \"updatedAt\": \"1981-08-12T03:34:47.121Z\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "list Appointments",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/appointments?page=0&size=10&sort=id,asc",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "appointments"
+                  ],
+                  "query": [
+                    {
+                      "key": "practitionerId",
+                      "value": "string",
+                      "disabled": true
+                    },
+                    {
+                      "key": "date",
+                      "value": "1970-04-05",
+                      "disabled": true
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "id,asc"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/appointments?practitionerId=string&date=1970-04-05&page=2667&size=5895&sort=string,string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "appointments"
+                      ],
+                      "query": [
+                        {
+                          "key": "practitionerId",
+                          "value": "string"
+                        },
+                        {
+                          "key": "date",
+                          "value": "1970-04-05"
+                        },
+                        {
+                          "key": "page",
+                          "value": "2667"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5895"
+                        },
+                        {
+                          "key": "sort",
+                          "value": "string,string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalElements\": 6350,\n  \"totalPages\": 9024,\n  \"first\": false,\n  \"last\": false,\n  \"size\": 8288,\n  \"content\": [\n    {\n      \"id\": \"string\",\n      \"patientId\": \"string\",\n      \"practitionerId\": \"string\",\n      \"startTime\": \"1971-06-11T12:37:30.390Z\",\n      \"endTime\": \"1958-03-18T10:37:30.160Z\",\n      \"status\": \"COMPLETED\",\n      \"notes\": \"string\",\n      \"createdAt\": \"1968-06-19T12:09:07.982Z\",\n      \"updatedAt\": \"1949-01-29T01:02:34.721Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"patientId\": \"string\",\n      \"practitionerId\": \"string\",\n      \"startTime\": \"1946-12-25T02:30:20.780Z\",\n      \"endTime\": \"1974-05-28T01:15:03.687Z\",\n      \"status\": \"BOOKED\",\n      \"notes\": \"string\",\n      \"createdAt\": \"1987-05-01T08:41:14.561Z\",\n      \"updatedAt\": \"1971-06-02T22:35:48.621Z\"\n    }\n  ],\n  \"number\": 5844,\n  \"sort\": {\n    \"empty\": true,\n    \"sorted\": false,\n    \"unsorted\": true\n  },\n  \"pageable\": {\n    \"offset\": 3236,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": true\n    },\n    \"pageNumber\": 583,\n    \"pageSize\": 8593,\n    \"paged\": false,\n    \"unpaged\": true\n  },\n  \"numberOfElements\": 523,\n  \"empty\": true\n}"
+                }
+              ]
+            },
+            {
+              "name": "create Appointment",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"endTime\": \"2011-10-26T15:05:25.411Z\",\n  \"patientId\": \"\",\n  \"practitionerId\": \"\",\n  \"startTime\": \"1999-12-25T01:15:29.930Z\",\n  \"notes\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/appointments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "appointments"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"endTime\": \"2011-10-26T15:05:25.411Z\",\n  \"patientId\": \"string\",\n  \"practitionerId\": \"string\",\n  \"startTime\": \"1999-12-25T01:15:29.930Z\",\n  \"notes\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/appointments",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "appointments"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"string\",\n  \"patientId\": \"string\",\n  \"practitionerId\": \"string\",\n  \"startTime\": \"2002-03-02T00:59:13.171Z\",\n  \"endTime\": \"2002-08-08T13:13:31.640Z\",\n  \"status\": \"COMPLETED\",\n  \"notes\": \"string\",\n  \"createdAt\": \"1962-01-01T11:36:40.576Z\",\n  \"updatedAt\": \"1981-08-12T03:34:47.121Z\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
