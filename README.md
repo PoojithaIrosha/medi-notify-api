@@ -390,7 +390,7 @@ export MONGODB_URI=mongodb://<user>:<password>@<host>:<port>/<database>?authSour
 A Postman collection covering all endpoints is included in the project root:
 
 ```
-API.postman_collection.json
+docs/postman/API.postman_collection.json
 ```
 
 Import the file into Postman to explore and test the API without writing requests manually.
